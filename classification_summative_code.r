@@ -22,14 +22,14 @@ library(rpart.plot)
 library(corrplot)
 
 
-
-## Studying the correlation
+# Reading the data
 bpl <- read.csv("https://www.louisaslett.com/Courses/MISCADA/bank_personal_loan.csv",
                 header=TRUE)
 
 
 numeric_data <- bpl[, sapply(bpl, is.numeric)]
 
+## Studying the correlation
 # correlation matrix
 cor_matrix <- cor(numeric_data)
 
